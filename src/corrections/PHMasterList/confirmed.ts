@@ -41,7 +41,8 @@ export default function confirmed(original: string | null, phMasterl: string): s
   if (caseNumber >= 3247 && caseNumber <= 3660) return '4/6/2020'; // https://www.facebook.com/OfficialDOHgov/posts/3206271899384040?__cft__[0]=AZWLLABhEotkYVv2qybfoUS2YZNV4Wdh4igTCUfnz-C19RcHXZSb5eAZxWuqeFOaExf6ZqZYeK7QRNWyCL7CM13QHn7E3DrR6rIUY6iVbu0yuusAlMykqzUI0tkm4JvfP0NX_6zFd72g1mxYnjqR0LgIncvjPsCv2IIwEOBOsPMGLg&__tn__=%2CO%2CP-R
   if (caseNumber >= 3661 && caseNumber <= 3764) return '4/7/2020'; // https://www.facebook.com/OfficialDOHgov/posts/3209013159109914?__cft__[0]=AZVcAjUjkCmDpY6rlL9rMDRdgJ0U12aBNpGOHtkfT8lTr4pAXedbtoWpWXcOkSzmVvDV32yzRb8tV_MsyOnohAIMMUhpPOzZs64h27pb55AT4RHXCsHDP-_s3WZgN6L6VGeoam1XZlBMwLaWmsc6-7MOS1lEimJrPqS_RRMyiFcNHg&__tn__=%2CO%2CP-R
   if (caseNumber >= 3765 && caseNumber <= 3870) return '4/8/2020'; // https://www.facebook.com/OfficialDOHgov/posts/3211679195509977?__cft__[0]=AZXSupqX9OZCUGECy1-b6AsU3ebp6lgElAcjutoPRXOFjTy_METtdqJ0qfVdvr7GSh6qzeaUxUtwTNmA9hPS2uLFIuovTWVualoC2La2WVNZqxjYPXJDeFL8nGrSO867bbHgBwZk-qdDRbBjp_IY_W52996qWy_Hg3JHWZOGFM0NNg&__tn__=%2CO%2CP-R
-  if (caseNumber > 3764) return '4/9/2020';
+  if (caseNumber >= 3871 && caseNumber <= 4076) return '4/9/2020'; // https://www.facebook.com/OfficialDOHgov/posts/3214313081913255?__cft__[0]=AZXqGYYbCUub25hG932aYpAsWNMFQG3swhZeHsqT4yNwU9PpFda98vsM1Fvh8tdUyYuBGhzedc6ctPc5NpJps4bqKoY56YFuVGz94_j4O4VHT9SXpAHFoUMAzCxsyDLOONOZ8xAjXEodkiyGQz4Lmi3qfjM9f_6K8-Z9e1FPCOWz9A&__tn__=%2CO%2CP-R
+  if (caseNumber > 4076) return '4/10/2020';
 
 
   return original;
