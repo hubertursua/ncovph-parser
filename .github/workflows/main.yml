@@ -1,4 +1,4 @@
-name: "Bump Version"
+name: "Release new version"
 
 on:
   push:
@@ -7,36 +7,33 @@ on:
 
 jobs:
   bump-version:
-    name: "Bump version on master"
+    name: "Release new version"
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout source code"
         uses: "actions/checkout@v2"
         with:
           ref: ${{ github.ref }}
-      - name: "cat package.json"
-        run: cat ./package.json
+
       - name: "Setup Node.js"
         uses: "actions/setup-node@v1"
         with:
           node-version: 12
-      - name: "Automated Version Bump"
+
+      - name: "Version bump"
         uses: "phips28/gh-action-bump-version@master"
         with:
           tag-prefix: ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: "cat package.json"
-        run: cat ./package.json
-  publish:
-    name: "Publish to npm"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 10
-      - run: npm install
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+
+      - name: "Release version"
+        run: node -e "console.log(require('./package.json').version)"
+
+      - name: "Pre-publish scripts"
+        run: npm install && npm run build
+
+      - name: "Publish to npm"
+        run: npm publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
