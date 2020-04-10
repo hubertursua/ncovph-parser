@@ -1,0 +1,34 @@
+{
+  "name": "ncovph-parser",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Hyubs Ursua <hyubs.u@gmail.com>",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js,.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "i18n-iso-countries": "^5.1.0",
+    "moment": "^2.24.0",
+    "node-cache": "^5.1.0",
+    "snake-case": "^3.0.3",
+    "uuid": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "license": "ISC"
+}
