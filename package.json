@@ -39,5 +39,6 @@
   "engines": {
     "node": "10"
   },
+  "repository": "github:hyubs/ncovph-parser",
   "license": "ISC"
 }
