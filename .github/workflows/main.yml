@@ -21,15 +21,18 @@ jobs:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
 
-      - name: "Version bump"
+      - name: "Bump version"
         uses: "phips28/gh-action-bump-version@master"
         with:
           tag-prefix: ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "Release version"
+      - name: "Print release version"
         run: node -e "console.log(require('./package.json').version)"
+
+      - name: "Install dependencies"
+        run: npm install
 
       - name: "Publish to NPM"
         run: npm publish
