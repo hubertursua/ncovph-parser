@@ -8,7 +8,8 @@
   "scripts": {
     "lint": "eslint . --ext .js,.ts",
     "build": "rm -rf dist && tsc",
-    "install": "npm run build"
+    "install": "npm run build",
+    "postinstall": "rm -rf src"
   },
   "dependencies": {
     "axios": "^0.19.2",
