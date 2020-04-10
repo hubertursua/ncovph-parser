@@ -4,6 +4,8 @@
 ![Release and publish](https://github.com/hyubs/ncovph-parser/workflows/Release%20and%20publish/badge.svg)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://raw.githubusercontent.com/hyubs/ncovph-parser/master/LICENSE)
 
+Parse library for [ncovph](https://github.com/hyubs/ncovph)
+
 ## Installation
 
 ### npm

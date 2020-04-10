@@ -1,7 +1,7 @@
 {
   "name": "ncovph-parser",
   "version": "1.1.10",
-  "description": "",
+  "description": "Parse library for ncovph",
   "author": "Hyubs Ursua <hyubs.u@gmail.com>",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
