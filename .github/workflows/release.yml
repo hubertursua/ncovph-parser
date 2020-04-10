@@ -6,7 +6,7 @@ on:
       - "master"
 
 jobs:
-  bump-version:
+  release-version:
     name: "Release new version"
     runs-on: ubuntu-latest
     steps:
@@ -30,24 +30,3 @@ jobs:
 
       - name: "Print release version"
         run: node -e "console.log(require('./package.json').version)"
-
-      - name: "Install dependencies"
-        run: npm install
-
-      - name: "Publish to NPM"
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: "Setup Node.js with GPR"
-        uses: "actions/setup-node@v1"
-        with:
-          node-version: 12
-          registry-url: 'https://npm.pkg.github.com'
-
-      - name: "Publish to GPR"
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
