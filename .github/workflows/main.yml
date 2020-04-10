@@ -30,9 +30,6 @@ jobs:
       - name: "Release version"
         run: node -e "console.log(require('./package.json').version)"
 
-      - name: "Pre-publish scripts"
-        run: npm install && npm run build
-
       - name: "Publish to npm"
         run: npm publish
         env:
