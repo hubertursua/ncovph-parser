@@ -15,10 +15,11 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - name: "Setup Node.js"
+      - name: "Setup Node.js with NPM Registry"
         uses: "actions/setup-node@v1"
         with:
           node-version: 12
+          registry-url: 'https://registry.npmjs.org'
 
       - name: "Version bump"
         uses: "phips28/gh-action-bump-version@master"
@@ -30,7 +31,20 @@ jobs:
       - name: "Release version"
         run: node -e "console.log(require('./package.json').version)"
 
-      - name: "Publish to npm"
+      - name: "Publish to NPM"
         run: npm publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: "Setup Node.js with GPR"
+        uses: "actions/setup-node@v1"
+        with:
+          node-version: 12
+          registry-url: 'https://npm.pkg.github.com'
+
+      - name: "Publish to GPR"
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
