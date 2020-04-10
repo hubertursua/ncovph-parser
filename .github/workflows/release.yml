@@ -18,7 +18,7 @@ jobs:
       - name: "Setup Node.js with NPM Registry"
         uses: "actions/setup-node@v1"
         with:
-          node-version: 12
+          node-version: 10
           registry-url: 'https://registry.npmjs.org'
 
       - name: "Bump version"
@@ -44,7 +44,7 @@ jobs:
       - name: "Setup Node.js with NPM Registry"
         uses: "actions/setup-node@v1"
         with:
-          node-version: 12
+          node-version: 10
           registry-url: 'https://registry.npmjs.org'
 
       - name: "Print version"
