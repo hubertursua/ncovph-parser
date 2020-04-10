@@ -4,9 +4,10 @@
   "description": "",
   "author": "Hyubs Ursua <hyubs.u@gmail.com>",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint . --ext .js,.ts",
-    "build": "tsc",
+    "build": "rm -rf dist && tsc",
     "install": "npm run build"
   },
   "dependencies": {
