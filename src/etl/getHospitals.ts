@@ -43,7 +43,7 @@ export async function getHospitalLevel3(): Promise<HospitalArcGISFeature[]> {
   }
 }
 
-function toHospitals(
+export function toHospitals(
   data: HospitalArcGISFeature[],
   level: HospitalLevel,
 ): Hospital[] {

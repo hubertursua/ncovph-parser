@@ -13,7 +13,7 @@ import toRemarks from '../parsers/toRemarks';
 import toCruiseShip from '../parsers/toCruiseShip';
 import log from '../utils/log';
 
-function toConfirmedCasePatientOFW(data: OFMasterlistArcGISFeature[]):
+export function toConfirmedCasePatientOFW(data: OFMasterlistArcGISFeature[]):
   ConfirmedCasePatientOFW[] {
   return data.map(
     (feature): ConfirmedCasePatientOFW => ({

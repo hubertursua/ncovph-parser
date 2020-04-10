@@ -21,7 +21,7 @@ import log from '../utils/log';
 import toDateDeceased from '../parsers/toDateDeceased';
 import toDateRecovered from '../parsers/toDateRecovered';
 
-function toConfirmedCasePatientLocal(data: PHMasterlistArcGISFeature[]):
+export function toConfirmedCasePatientLocal(data: PHMasterlistArcGISFeature[]):
   ConfirmedCasePatientLocal[] {
   return data.map(
     (feature): ConfirmedCasePatientLocal => ({

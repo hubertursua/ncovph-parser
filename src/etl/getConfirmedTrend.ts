@@ -7,7 +7,7 @@ import DataUrls from '../consts/DataUrls';
 import log from '../utils/log';
 import ConfirmedTrend from '../types/ConfirmedTrend';
 
-function toConfirmedTrend(data: ConfirmedArcGISFeature[]):
+export function toConfirmedTrend(data: ConfirmedArcGISFeature[]):
   ConfirmedTrend[] {
   return data.map(
     (feature): ConfirmedTrend => ({

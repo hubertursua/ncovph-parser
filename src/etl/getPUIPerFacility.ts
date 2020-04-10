@@ -10,7 +10,7 @@ import correctPUIFacTracing from '../corrections/PUIFacTracing';
 import toFacilityName from '../parsers/toFacilityName';
 import toFacilityCoordinates from '../parsers/toFacilityCoordinates';
 
-function toPUIPerFacility(data: PUIFacTracingArcGISFeature[]): PUIPerFacility[] {
+export function toPUIPerFacility(data: PUIFacTracingArcGISFeature[]): PUIPerFacility[] {
   return data.map((feature): PUIPerFacility => {
     const facilityName = toFacilityName(feature.hf);
     const facilityCoordinates = toFacilityCoordinates(

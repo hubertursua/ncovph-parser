@@ -6,7 +6,7 @@ import log from '../utils/log';
 import SlideFigArcGISFeature from '../types/SlideFigArcGISFeature';
 import Counts from '../types/Counts';
 
-function toCount(
+export function toCount(
   data: SlideFigArcGISFeature,
 ): Counts {
   return {

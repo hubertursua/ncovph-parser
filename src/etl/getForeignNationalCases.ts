@@ -13,7 +13,7 @@ import toTravelDate from '../parsers/toTravelDate';
 import toTravelHistories from '../parsers/toTravelHistories';
 import log from '../utils/log';
 
-function toConfirmedCasePatientForeignNational(
+export function toConfirmedCasePatientForeignNational(
   data: FNMasterlistArcGISFeature[],
 ): ConfirmedCasePatientForeignNational[] {
   return data.map(
