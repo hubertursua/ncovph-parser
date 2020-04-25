@@ -1844,7 +1844,7 @@ export default [
     province: 'Cebu',
   },
   {
-    name: 'Lapu-Lapu (Opon) City',
+    name: 'Lapu-Lapu City (Opon)',
     province: 'Cebu',
   },
   {
@@ -4300,7 +4300,7 @@ export default [
     province: 'Negros Oriental',
   },
   {
-    name: 'Bayawan (Tulong) City',
+    name: 'Bayawan City (Tulong)',
     province: 'Negros Oriental',
   },
   {
@@ -5676,7 +5676,7 @@ export default [
     province: 'South Cotabato',
   },
   {
-    name: 'General Santos (Dadiangas) City',
+    name: 'General Santos City (Dadiangas)',
     province: 'South Cotabato',
   },
   {
